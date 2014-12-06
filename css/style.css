@@ -1,0 +1,61 @@
+@font-face {
+	font-family: "Georgia";
+	font-size: 8px;
+	src: url(../data/font/georgia.ttf);
+}
+
+body {
+	background-image: url("../data/img/bg/default_bg.jpg");
+	cursor: url("../data/img/cursor/default.png") 0 0, auto;
+	color: #fff;
+
+	/* Allow mouse dragging. */
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	
+	/* disable touch panning/zooming */
+	-ms-touch-action: none;
+	touch-action: none;
+
+	/* Allow canvas to hit the edges of the browser viewport. */
+	margin: 0;
+}
+
+#screen canvas {
+	margin: auto;
+
+	/* Hide the gap for font descenders. */
+	display: block;
+	
+	/* disable scaling interpolation */
+	image-rendering: optimizeSpeed;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: optimize-contrast;
+	-ms-interpolation-mode: nearest-neighbor;
+}
+
+#hidden {
+	visibility: hidden;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+#game {
+	margin: 0 auto;
+	min-height: 600px;
+	height: 800px;
+	max-height: 600px;
+	min-width: 800px;
+	width: 800px;
+	max-width: 800px;
+	background: #000;
+	overflow: hidden;
+}
