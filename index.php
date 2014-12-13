@@ -51,7 +51,8 @@
 
 		<script type="text/javascript" src="js/screens/CustomLoadingScreen.js"></script>
 		<script type="text/javascript" src="js/screens/IntroScreen.js"></script>
-
+		
+		<script type="text/javascript" src="js/screens/menu_screens/ServerNewMultiplayerGame.js"></script>
 		<script type="text/javascript" src="js/screens/menu_screens/CreateNewMultiplayerGame.js"></script>
 		<script type="text/javascript" src="js/screens/MainMenu.js"></script>
 

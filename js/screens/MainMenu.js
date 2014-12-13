@@ -8,7 +8,10 @@ game.Screen.MainMenu = me.ScreenObject.extend({
 		this.rootMenu           		= new game.Menu({ backgroundimage:"mainmenubg1" });
 		var NewGameMenu         		= new game.Menu({ backgroundimage:"mainmenubg1" });
 		var LoadGameMenu        		= new game.Menu({ backgroundimage:"mainmenubg1" });
-		var CreateNewMultiplayerGame	= new game.Menu({ backgroundimage:"mainmenubg2" });
+
+		//Multiplayer menu - New game
+		var ServerNewMultiplayerGame 	= new game.Menu({ backgroundimage:"mainmenubg2" }); //create new server or join existing one - screen
+		var CreateNewMultiplayerGame	= new game.Menu({ backgroundimage:"mainmenubg2" }); //creating / joining game - screen
  
 		/**
 		 * Main menu
@@ -83,7 +86,7 @@ game.Screen.MainMenu = me.ScreenObject.extend({
 			x : 560,
 			y : 130,
 			spritename: "multiplayer",
-			subMenu : CreateNewMultiplayerGame
+			subMenu : ServerNewMultiplayerGame
 		});
 		NewGameMenu.addMenuButton({
 			spritename : "campaign",
@@ -172,10 +175,14 @@ game.Screen.MainMenu = me.ScreenObject.extend({
 			callback : LoadGameMenu.goBack.bind(LoadGameMenu)
 		});
 
+		//Add the content for the ServerNewMultiplayerGame container
+		game.Screen.ServerNewMultiplayerGame(ServerNewMultiplayerGame);
+
 		//Add the content for the CreateNewMultiplayerGame container
 		game.Screen.CreateNewMultiplayerGame(CreateNewMultiplayerGame);
 
+
 		me.game.world.addChild.defer(me.game.world, this.rootMenu);
-		//me.game.world.addChild.defer(me.game.world, CreateNewMultiplayerGame);
+		//me.game.world.addChild.defer(me.game.world, ServerNewMultiplayerGame);
 	}
 });

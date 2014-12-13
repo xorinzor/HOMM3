@@ -4,7 +4,7 @@ game.Dialog = me.Container.extend({
 		this.name = "Dialog";
 		this.z = Infinity
 		this.settings = settings;
-
+        this.updateWhenPaused = true;
 		this.font = new me.Font("georgia", 14, "#FFF", "left");
 		this.dialog = settings.text;
         this.counter = 0;
@@ -49,15 +49,18 @@ game.Dialog = me.Container.extend({
             x: this.padding.x - 30 + (this.dialogwidth / 2),
             y : this.padding.y + this.textHeight + 50,
             z: 5,
+            updateWhenPaused: true,
             parentMenu: this,
             callback : function() {
             	me.game.world.removeChild(this.parentMenu);
+                me.state.resume();
             }
         });
 
         confirm.enableEvents();
 
 		this.addChild(confirm);
+        me.state.pause();
 	},
 
 	getWords: function(text) {

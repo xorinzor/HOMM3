@@ -162,61 +162,140 @@ game.sprites = {
 		largebutton: {
 			image: "menu_buttons_sprite", spritewidth: 200, spriteheight: 20,
 			state: {
-				normal: 	{ x: 0, 	y: 200 },
-				active: 	{ x: 200, 	y: 200 },
-				inactive: 	{ x: 400, 	y: 200 }
+				normal: 	{ x: 0, 	y: 180 },
+				active: 	{ x: 200, 	y: 180 },
+				inactive: 	{ x: 400, 	y: 180 }
 			}
 		},
 
 		chess_pawn: {
 			image: "menu_buttons_sprite", spritewidth: 30, spriteheight: 46,
 			state: {
-				normal: 	{ x: 0, 	y: 246 },
-				hover: 		{ x: 30, 	y: 246 },
-				active: 	{ x: 60, 	y: 246 },
-				inactive: 	{ x: 90, 	y: 246 }
+				normal: 	{ x: 0, 	y: 200 },
+				hover: 		{ x: 30, 	y: 200 },
+				active: 	{ x: 60, 	y: 200 },
+				inactive: 	{ x: 90, 	y: 200 }
 			}
 		},
 
 		chess_horse: {
 			image: "menu_buttons_sprite", spritewidth: 30, spriteheight: 46,
 			state: {
-				normal: 	{ x: 120, 	y: 292 },
-				hover: 		{ x: 150, 	y: 292 },
-				active: 	{ x: 180, 	y: 292 },
-				inactive: 	{ x: 210, 	y: 292 }
+				normal: 	{ x: 120, 	y: 200 },
+				hover: 		{ x: 150, 	y: 200 },
+				active: 	{ x: 180, 	y: 200 },
+				inactive: 	{ x: 210, 	y: 200 }
 			}
 		},
 
 		chess_tower: {
 			image: "menu_buttons_sprite", spritewidth: 30, spriteheight: 46,
 			state: {
-				normal: 	{ x: 240, 	y: 338 },
-				hover: 		{ x: 270, 	y: 338 },
-				active: 	{ x: 300, 	y: 338 },
-				inactive: 	{ x: 330, 	y: 338 }
+				normal: 	{ x: 240, 	y: 200 },
+				hover: 		{ x: 270, 	y: 200 },
+				active: 	{ x: 300, 	y: 200 },
+				inactive: 	{ x: 330, 	y: 200 }
 			}
 		},
 
 		chess_queen: {
 			image: "menu_buttons_sprite", spritewidth: 30, spriteheight: 46,
 			state: {
-				normal: 	{ x: 360, 	y: 384 },
-				hover: 		{ x: 390, 	y: 384 },
-				active: 	{ x: 420, 	y: 384 },
-				inactive: 	{ x: 450, 	y: 384 }
+				normal: 	{ x: 360, 	y: 200 },
+				hover: 		{ x: 390, 	y: 200 },
+				active: 	{ x: 420, 	y: 200 },
+				inactive: 	{ x: 450, 	y: 200 }
 			}
 		},
 
 		chess_king: {
 			image: "menu_buttons_sprite", spritewidth: 30, spriteheight: 46,
 			state: {
-				normal: 	{ x: 480, 	y: 430 },
-				hover: 		{ x: 510, 	y: 430 },
-				active: 	{ x: 540, 	y: 430 },
-				inactive: 	{ x: 570, 	y: 430 }
+				normal: 	{ x: 480, 	y: 200 },
+				hover: 		{ x: 510, 	y: 200 },
+				active: 	{ x: 540, 	y: 200 },
+				inactive: 	{ x: 570, 	y: 200 }
+			}
+		},
+
+		gold_check: {
+			image: "menu_buttons_sprite", spritewidth: 64, spriteheight: 32,
+			state: {
+				normal: 	{ x: 0, 	y: 246 },
+				hover: 		{ x: 64, 	y: 246 },
+				active: 	{ x: 128, 	y: 246 },
+				inactive: 	{ x: 192, 	y: 246 }
+			}
+		},
+
+		gold_cancel: {
+			image: "menu_buttons_sprite", spritewidth: 64, spriteheight: 32,
+			state: {
+				normal: 	{ x: 0, 	y: 278 },
+				hover: 		{ x: 64, 	y: 278 },
+				active: 	{ x: 128, 	y: 278 },
+				inactive: 	{ x: 192, 	y: 278 }
+			}
+		},
+
+		gold_exit: {
+			image: "menu_buttons_sprite", spritewidth: 64, spriteheight: 32,
+			state: {
+				normal: 	{ x: 0, 	y: 310 },
+				hover: 		{ x: 64, 	y: 310 },
+				active: 	{ x: 128, 	y: 310 },
+				inactive: 	{ x: 192, 	y: 310 }
+			}
+		},
+
+		/**
+		 * Multiplayer server select buttons
+		 */
+		gold_mp_host: {
+			image: "menu_buttons_sprite", spritewidth: 64, spriteheight: 48,
+			state: {
+				normal: 	{ x: 0, 	y: 342 },
+				hover: 		{ x: 64, 	y: 342 },
+				active: 	{ x: 128, 	y: 342 },
+				inactive: 	{ x: 192, 	y: 342 }
+			}
+		},
+
+		gold_mp_join: {
+			image: "menu_buttons_sprite", spritewidth: 64, spriteheight: 48,
+			state: {
+				normal: 	{ x: 0, 	y: 390 },
+				hover: 		{ x: 64, 	y: 390 },
+				active: 	{ x: 128, 	y: 390 },
+				inactive: 	{ x: 192, 	y: 390 }
+			}
+		},
+
+		gold_mp_search: {
+			image: "menu_buttons_sprite", spritewidth: 64, spriteheight: 48,
+			state: {
+				normal: 	{ x: 0, 	y: 438 },
+				hover: 		{ x: 64, 	y: 438 },
+				active: 	{ x: 128, 	y: 438 },
+				inactive: 	{ x: 192, 	y: 438 }
+			}
+		},
+
+		gold_mp_direct: {
+			image: "menu_buttons_sprite", spritewidth: 64, spriteheight: 48,
+			state: {
+				normal: 	{ x: 0, 	y: 486 },
+				hover: 		{ x: 64, 	y: 486 },
+				active: 	{ x: 128, 	y: 486 },
+				inactive: 	{ x: 192, 	y: 486 }
 			}
 		}
+	},
+
+	server_status: {
+		available: 	{ x: 0, y: 0 },
+		closed: 	{ x: 23, y: 0 },
+		password: 	{ x: 46, y: 0 }
 	},
 
 	dialog: {

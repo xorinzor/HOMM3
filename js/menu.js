@@ -13,6 +13,7 @@ game.MenuButton = me.GUI_Object.extend({
 		this.hover = false;
 		this.isClicked = false;
 		this.isSelected = false; //Wheter or not to keep the button active, in a "selected" state
+		this.updateWhenPaused = settings.updateWhenPaused || false;
 		this.settings = settings;
 
 		if(typeof settings.canBeSelected !== "boolean") {
@@ -37,7 +38,7 @@ game.MenuButton = me.GUI_Object.extend({
     	//Make sure we can actually hover over the object and our mouse is within the rectangle of the object's x/y coords
         this.hover = this.inViewport && this.getBounds().containsPoint(event.gameX, event.gameY);
 
-        if(this.isClicked === false && this.isSelected === false && this.isDisabled === false) {
+        if(this.isClicked === false && this.isSelected === false && this.isDisabled === false && ((me.state.isPaused() === true && this.updateWhenPaused === true) || me.state.isPaused() === false)) {
         	this.updated = true;
 
         	if(this.hover === true && typeof(this.settings.state.hover) !== "undefined") {
@@ -52,7 +53,7 @@ game.MenuButton = me.GUI_Object.extend({
 
 	onClick: function(e) {
 		// Only do stuff when our container is in the world.
-		if (!this.parentMenu.ancestor || this.isDisabled === true) {
+		if (!this.parentMenu.ancestor || this.isDisabled === true || (me.state.isPaused() === true && this.updateWhenPaused === false)) {
 			return;
 		}
 
@@ -76,7 +77,7 @@ game.MenuButton = me.GUI_Object.extend({
 
 	onRelease: function(e) {
 		// Only do stuff when our container is in the world.
-		if (!this.parentMenu.ancestor || this.isDisabled === true) {
+		if (!this.parentMenu.ancestor || this.isDisabled === true || (me.state.isPaused() === true && this.updateWhenPaused === false)) {
 			return;
 		}
 

@@ -11,6 +11,9 @@ game.resources.ui = [
 	{ name: "introscreenbg",        type: "image",          src: "data/img/bg/introscreen.jpg" },
 	{ name: "default_bg",        	type: "image",          src: "data/img/bg/default_bg.jpg" },
 	{ name: "default_bg_rougher",   type: "image",          src: "data/img/bg/default_bg_rougher.jpg" },
+	{ name: "default_bg_blue",      type: "image",          src: "data/img/bg/default_bg_blue.jpg" },
+	{ name: "default_bg_blue_dark", type: "image",          src: "data/img/bg/default_bg_blue_dark.jpg" },
+	{ name: "default_bg_grey",      type: "image",          src: "data/img/bg/default_bg_grey.jpg" },
 
 	{ name: "mainmenu_buttons",     type: "image",          src: "data/img/ui/buttons/mainmenu_buttons_sprite.png" },
 	{ name: "check_button",     	type: "image",          src: "data/img/ui/buttons/check_button_sprite.png" },
@@ -35,6 +38,7 @@ game.resources.ui = [
 	{ name: "ScenarioSelectLeft", 						type: "image", 			src: "data/img/ui/interface_elements/ScenarioSelectLeft.png" },
 	{ name: "ScenarioSelectRight", 						type: "image", 			src: "data/img/ui/interface_elements/ScenarioSelectRight.png" },
 	{ name: "AdvOptionsLeft", 							type: "image", 			src: "data/img/ui/interface_elements/AdvOptionsLeft.png" },
+	{ name: "mp_server_status", 						type: "image", 			src: "data/img/ui/interface_elements/mp_server_status.png" },
 
 	/* Texture Atlases
 	 * @example
