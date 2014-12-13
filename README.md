@@ -23,6 +23,7 @@ To build:
 
     grunt
 
+<<<<<<< HEAD
 
 Running the game:
 
@@ -36,3 +37,9 @@ Note that you may have to edit the file `Gruntfile.js` if you need to better dic
 -------------------------------------------------------------------------------
 Copyright (C) 2011 - 2014 Olivier Biot, Jason Oster, Aaron McLeod
 melonJS is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php)
+=======
+__All Heroes of Might & Magic 3 images and audio files used in this project
+belong to 3DO (now owned by Ubisoft) and New World Computing. No code from the original game was used.__
+
+Built using the MelonJS Javascript game engine.
+>>>>>>> origin/master
